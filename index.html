@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yusuke Portfolio</title>
+  <meta name="description" content="フリーランス動画編集者のポートフォリオ" />
+  <style>
+    :root { --bg:#0f1115; --fg:#e6e7ea; --muted:#9aa0a6; --card:#161a22; --accent:#7aa2f7; }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--fg);font-family:ui-sans-serif,system-ui,Segoe UI,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:960px;margin:0 auto;padding:24px}
+    header{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+    .brand{font-size:20px;font-weight:700;letter-spacing:.2px}
+    nav a{margin-left:16px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:24px 0}
+    .hero h1{font-size:38px;line-height:1.2;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 16px}
+    .card{background:var(--card);border:1px solid #252b36;border-radius:16px;padding:18px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid #2a3140;background:#1a2130}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    h2{margin:32px 0 12px;font-size:22px}
+    footer{color:var(--muted);padding:32px 0;font-size:14px}
+    @media (max-width:800px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">Yusuke Studio</div>
+      <nav>
+        <a href="#about">プロフィール</a>
+        <a href="#works">制作実績</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </header>
+
+    <section class="hero card">
+      <div>
+        <h1>動画編集で、<br/>“伝わる”をデザインします。</h1>
+        <p>ショート動画／YouTube編集／企業PRなど。スピードと丁寧さで、目的に合わせた編集をご提案します。</p>
+        <a class="btn" href="#contact">無料見積もりを依頼</a>
+      </div>
+      <div class="card">
+        <strong>対応サービス</strong>
+        <ul>
+          <li>ショート動画（TikTok / Reels / Shorts）</li>
+          <li>YouTube（カット / テロップ / BGM / SE / サムネ）</li>
+          <li>企業・店舗PR／採用動画</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>プロフィール</h2>
+      <div class="card">
+        <p>フリーランス動画編集者の優介です。順張り思考でスピード重視、でもクオリティ妥協なし。編集はもちろん、構成やサムネの仮案まで一貫対応します。</p>
+        <p style="color:var(--muted)">使用ツール：Adobe Premiere Pro / After Effects / Photoshop</p>
+      </div>
+    </section>
+
+    <section id="works">
+      <h2>制作実績</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>企業紹介 60秒</strong>
+          <p class="muted">BGM/SE、アニメーションテロップ、ロゴアニメ</p>
+          <a href="#" aria-disabled="true">近日公開</a>
+        </div>
+        <div class="card">
+          <strong>YouTube編集</strong>
+          <p class="muted">長尺編集・カット最適化・音声整備</p>
+          <a href="#" aria-disabled="true">近日公開</a>
+        </div>
+        <div class="card">
+          <strong>ショート動画</strong>
+          <p class="muted">テンポ重視・見せ場演出・縦型9:16</p>
+          <a href="#" aria-disabled="true">近日公開</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>お問い合わせ</h2>
+      <div class="card">
+        <p>ご依頼やご相談は、下記のフォームまたはSNSのDMからお気軽にどうぞ。</p>
+        <ul>
+          <li>メール：<a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li>X(旧Twitter)：<a href="https://x.com/">@yusuke_edit</a></li>
+          <li>Instagram：<a href="https://instagram.com/">@yusuke_edit</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Yusuke Studio. All rights reserved.
+    </footer>
+  </div>
+  <script>document.getElementById("year").textContent=new Date().getFullYear()</script>
+</body>
+</html>
